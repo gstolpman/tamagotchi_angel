@@ -1,0 +1,137 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-image {
+  background-image: url(../img/openingpage.png);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.horizon-image {
+  background-image: url("../img/horizon.png");
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+  color: #fce7e6;
+  font-family: "Cute Font", sans-serif;
+  text-shadow: 2px 4px 4px #40242d1f;
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+.content:hover {
+  transform: scale(1.03);
+}
+
+.angel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.angel img {
+  width: 700px;
+  height: auto;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 300px;
+  grid-gap: -10px;
+  grid-row-gap: -20px;
+  position: fixed;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 45%;
+  height: auto;
+}
+
+.scrolling-bunny {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  z-index: 2;
+}
+
+/* by default, the overlays have display:none, causing 
+them to disappear until the anchor tag is clicked */
+
+.overlay {
+  display: none;
+
+  /* The following CSS tells the overlay where to appear, and at what size/background color */
+
+  position: fixed;
+  top: 25%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background-color:#A7AED8;
+}
+
+/* the following CSS rule is what causes the overlay image to appear 
+ when its corresponding anchor tag in the gravestone grid is clicked */
+
+.overlay:target {
+  display: block;
+}
+
+.overlay-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-overlay {
+  position: absolute;
+  color: #7C87C0;
+  font-size: 40px;
+  font-family: "Cute Font", sans-serif;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the_cemetery</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="horizon-image"></div>
+
+    <div class="grid-container">
+      <!-- Each gravestone's image tag in the grid needs to get wrapped in an anchor tag that
+      follows this format, where the href is the id for the overlay content -->
+
+      <div class="grid-item">
+        <a href="#overlay1" class="image-link">
+          <img src="img/grave.png" class="image" />
+        </a>
+      </div>
+
+      <!-- end gravestone grid item HTML -->
+
+      <!-- Each gravestone also needs an image overlay, which can follow this format below. The ID for the
+      outermost div needs to mach the href for the link added around the img tag for the gravestone.
+      In this case, we gave our first overlay an ID of overlay1 which matches the anchor tag aboves href of #overlay1 . 
+      The reason they need to be the same is because we use the :target pseudoclasss in the CSS, which uses a link to 
+      target another piece of HTML in order to apply some CSS to it. We are using our link to target the overlay
+      and cause it to display. -->
+
+      <div class="overlay" id="overlay1">
+        <div class="overlay-content">
+          <!-- replace this image with your pet's ID card -->
+          <img src="img/peanut.png" class="overlay-image" alt="gravestone 1"/>
+          <a href="#" class="close-overlay">close</a>
+        </div>
+      </div>
+
+      <!-- end overlay HTML -->
+    
+        <div class="grid-item">
+          <a href="#overlay2" class="image-link">
+            <img src="img/grave.png" class="image" />
+          </a>
+        </div>
+        
+        <div class="overlay" id="overlay2">
+          <div class="overlay-content">
+            <img src="img/tulip.png" class="overlay-image" alt="gravestone 2"/>
+            <a href="#" class="close-overlay">close</a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <a href="#overlay3" class="image-link">
+            <img src="img/grave.png" class="image" />
+          </a>
+        </div>
+        
+        <div class="overlay" id="overlay3">
+          <div class="overlay-content">
+            <img src="img/sprinkle.png" class="overlay-image" alt="gravestone 3"/>
+            <a href="#" class="close-overlay">close</a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <a href="#overlay4" class="image-link">
+            <img src="img/grave.png" class="image" />
+          </a>
+        </div>
+        
+        <div class="overlay" id="overlay4">
+          <div class="overlay-content">
+            <img src="img/sid.png" class="overlay-image" alt="gravestone 4"/>
+            <a href="#" class="close-overlay">close</a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <a href="#overlay5" class="image-link">
+            <img src="img/grave.png" class="image" />
+          </a>
+        </div>
+        
+        <div class="overlay" id="overlay5">
+          <div class="overlay-content">
+            <img src="img/toby.png" class="overlay-image" alt="gravestone 5"/>
+            <a href="#" class="close-overlay">close</a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <a href="#overlay6" class="image-link">
+            <img src="img/grave.png" class="image" />
+          </a>
+        </div>
+        
+        <div class="overlay" id="overlay6">
+          <div class="overlay-content">
+            <img src="img/hazel.png" class="overlay-image" alt="gravestone 6"/>
+            <a href="#" class="close-overlay">close</a>
+          </div>
+        </div>
+
+    </div> 
+    <!-- end grid container -->
+
+    <a href="index.html">
+      <img src="img/bunny.gif" alt="Bunny" class="scrolling-bunny" />
+    </a>
+
+    <div class="content"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
